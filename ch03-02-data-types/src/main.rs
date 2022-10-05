@@ -62,7 +62,7 @@ fn main() {
     let _read_len = stdin.read_line(&mut buffer).expect("error");
 
     //parse the string value to usize
-    let index: usize = buffer.trim().parse().expect("error");
+    let _index: usize = buffer.trim().parse().expect("error");
 
     let index = buffer.trim().parse::<usize>().expect("error");
     //use index to get the element from the array
