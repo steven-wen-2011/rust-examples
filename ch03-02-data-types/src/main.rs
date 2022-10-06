@@ -55,18 +55,20 @@ fn main() {
 
     // get stdio device
     let stdin = io::stdin();
-
     // porpering a string as read buffer
     let mut buffer = String::new();
     //use stdio device read line and fill the data into string
-    let _read_len = stdin.read_line(&mut buffer).expect("error");
+    let read_size = stdin.read_line(&mut buffer).expect("error");
+
+    println!("read {read_size} characters from the console");
 
     //parse the string value to usize
-    let _index: usize = buffer.trim().parse().expect("error");
-
-    let index = buffer.trim().parse::<usize>().expect("error");
+    let index: usize = buffer.trim().parse().expect("error");
     //use index to get the element from the array
     let element = array[index];
+
     //print the element
     println!("Your selected value is {element}");
+
+    
 }
